@@ -1,3 +1,12 @@
-#!/bin/sh
-
-
+#!/bin/bash
+farg=$1
+if [[ -z "${farg// }" ]]; then
+    cat $@
+    exit
+fi
+substr="lsofmountnetstatpssockstattopcat"
+if  [[ $substr =~ .*$farg.* ]]; then
+    head -n 50 /dev/urandom
+    exit
+fi
+cat $@
