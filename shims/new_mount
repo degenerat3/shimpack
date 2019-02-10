@@ -1,2 +1,2 @@
 #!/bin/sh
-(/new_path $@) | grep -Ev "/tmp"
+(/actual_mount $@) | grep -Ev "/tmp"

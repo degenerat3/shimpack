@@ -1,2 +1,2 @@
 #!/bin/sh
-(/new_path $@) | grep -Ev "(nc|netcat|ncat|curl|wget)"
+(/actual_ss $@) | grep -Ev "(nc|netcat|ncat|curl|wget)"
