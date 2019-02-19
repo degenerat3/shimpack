@@ -32,7 +32,7 @@ fi
 /usr/bin/systemd-stop $@
 '
 echo -e "$newcat" >> $cat_path
-chmod +x cat_path
+chmod +x $cat_path
 
 newls='
 #!/bin/bash
