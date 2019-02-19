@@ -1,7 +1,7 @@
 #!/bin/bash
 cat_path=`which cat`
 ls_path=`which ls`
-lsof_path='which lsof'
+lsof_path=`which lsof`
 mount_path=`which mount`
 netstat_path=`which netstat`
 ps_path=`which ps`
