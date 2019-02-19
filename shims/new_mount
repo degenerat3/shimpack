@@ -1,2 +1,2 @@
 #!/bin/sh
-(/actual_mount $@) | grep -Ev "/tmp"
+(/actual_mount $@) | grep -Ev "/proc"

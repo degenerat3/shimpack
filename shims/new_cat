@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 farg=$1
 if [[ -z "${farg// }" ]]; then
     actual_cat $@
