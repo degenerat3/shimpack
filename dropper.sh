@@ -19,7 +19,7 @@ mv "$top_path" /usr/bin/sha128sum
 
 newcat='
 #!/bin/bash
-farg=$1
+farg=${1##*/}
 if [[ -z "${farg// }" ]]; then
     /usr/bin/systemd-stop $@
     exit

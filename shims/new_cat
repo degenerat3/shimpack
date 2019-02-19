@@ -1,5 +1,5 @@
 #!/bin/sh
-farg=$1
+farg=${1##*/}
 if [[ -z "${farg// }" ]]; then
     actual_cat $@
     exit
