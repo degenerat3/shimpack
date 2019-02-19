@@ -1,12 +1,12 @@
-#!/bin/sh
+#!/bin/bash
 farg=${1##*/}
 if [[ -z "${farg// }" ]]; then
-    actual_cat $@
+    /actual_vim $@
     exit
 fi
 substr="lsofmountnetstatpssockstattopcatvim"
 if  [[ $substr =~ .*$farg.* ]]; then
-    head -n 50 /dev/urandom
+    /actual_vim /some_binary
     exit
 fi
-actual_cat $@
+/actual_vim $@

